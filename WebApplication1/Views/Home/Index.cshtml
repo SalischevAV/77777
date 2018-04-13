@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Calc</title>
+</head>
+<body>
+    <div>
+        <form method="post" action="/Home/Index">
+            <input type="text" name="stringForArray" value="" />
+            <input type="submit" name="submit" value="Добавить строку" />
+        </form>
+        @foreach (string ministring in (List<string>)Session["list"])
+        {
+            <p> @ministring</p>
+        }
+    </div>
+</body>
+</html>
+

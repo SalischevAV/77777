@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Name";
+    //Layout = null;
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Calc</title>
+</head>
+<body>
+    <div>
+        <form method="post" action="/Name/Index">
+            <label for="sameName">Ваше имя:</label>
+            <input type="text" name="sameName" value="" />
+            <br />
+            <input type="submit" value="Сказать серверу привет" />
+        </form>
+        <p><label></label>@ViewBag.Name</p>
+        <p><label>Method: </label>@ViewBag.Method</p>
+        <script>
+
+        </script>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,21 @@
+﻿@model System.Collections.IEnumerable
+    @{
+        ViewBag.Title = "Index";
+    }
+
+    <h2>ArrayWriter</h2>
+    <form method="post" action="/ArrayWriter/Index">
+        <input type="text" name="min" value="" />
+        <br />
+        <input type="text" name="max" value="" />
+        <br />
+        <input type="submit" value="send" />
+    </form>
+
+   
+        @foreach (var item in Model)
+        {
+            <p> @item </p>
+        }
+
+
