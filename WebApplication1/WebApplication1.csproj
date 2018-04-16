@@ -121,6 +121,10 @@
     <Content Include="Views\PathView\PathView02.cshtml" />
     <Content Include="Views\PathView\PathView03.cshtml" />
     <Content Include="Views\ArrayWriter\Index.cshtml" />
+    <Content Include="Views\PartialObserver\Index.cshtml" />
+    <Content Include="Views\PartialObserver\PartialView01.cshtml" />
+    <Content Include="Views\PartialObserver\PartialView02.cshtml" />
+    <Content Include="Views\PartialObserver\ReturnPartial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -157,6 +161,7 @@
     <Compile Include="Controllers\FileController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NameController.cs" />
+    <Compile Include="Controllers\PartialObserverController.cs" />
     <Compile Include="Controllers\PathViewController.cs" />
     <Compile Include="Controllers\RedirectController.cs" />
     <Compile Include="Global.asax.cs">

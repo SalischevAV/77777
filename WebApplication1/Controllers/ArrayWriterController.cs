@@ -12,14 +12,8 @@ namespace WebApplication1.Controllers
 
         private int[] FillArray(int min, int max)
         {
-            int middle;
-            int size = Math.Abs(max - min);
-            //if (max < min)
-            //{
-            //    middle = min;
-            //    min = max;
-            //    max = middle;
-            //}
+           
+            int size = Math.Abs(max - min);         
 
             int[] myArr = new int[size+1];
             for (int i = 0; i <= size; i++)
