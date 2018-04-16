@@ -23,10 +23,13 @@ namespace WebApplication1.Controllers
 
 
         [HttpPost]
-        public ActionResult Index(string stringForArray)
+        public ActionResult Index(string stringForArray, string action)
         {
             _myStringArr = (List<string>)Session["list"];
-            _myStringArr.Add(stringForArray);
+            if (action == "add")
+                _myStringArr.Add(stringForArray);
+            else if (action == "clear")
+                _myStringArr.Clear();
             Session["list"] = _myStringArr;
             return View();
         }
@@ -41,6 +44,15 @@ namespace WebApplication1.Controllers
             requestInfoList.Add(HttpContext.Request.RawUrl);
             ViewBag.Context = requestInfoList;
             return View();
+        }
+
+        public ActionResult CreateList()
+        {
+            _myStringArr = (List<string>)Session["list"];
+            if (_myStringArr != null)
+                return View(_myStringArr);
+            else
+                return View(new List<string>());
         }
 
     }

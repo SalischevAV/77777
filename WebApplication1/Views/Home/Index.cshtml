@@ -12,12 +12,18 @@
     <div>
         <form method="post" action="/Home/Index">
             <input type="text" name="stringForArray" value="" />
-            <input type="submit" name="submit" value="Добавить строку" />
+            <input type="submit" name="action" value="add" />
+            <input type="submit" name="action" value="clear" />
         </form>
+        @using (Html.BeginForm("CreateList", "Home"))
+        {
+            <input type="submit" value="create" />
+        }
         @foreach (string ministring in (List<string>)Session["list"])
         {
             <p> @ministring</p>
         }
+
     </div>
 </body>
 </html>
